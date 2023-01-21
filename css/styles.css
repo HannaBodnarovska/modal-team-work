@@ -65,6 +65,17 @@ button {
     cursor: pointer;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 .product-card-modal-container {
     width: 100%;
     background-color: var(--text-light-color);
@@ -121,7 +132,7 @@ button {
     }
 }
 
-.product-card-modal-list li {
+.product-card-modal-list label {
     position: relative;
     width: 132px;
     height: 200px;
@@ -140,6 +151,7 @@ button {
     width: 132px;
     height: 132px;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .cirle-cream {
@@ -170,16 +182,15 @@ button {
 }
 
 .frame-coffe {
-    background: var(--background-card-color-coffee);
     border: 2px solid var(--background-card-color-coffee);
-    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
 }
 
 .frame-milkshake {
     border: 2px solid var(--background-card-color-milkshakes);
 }
 
-.product-card-modal-list p {
+.product-card-modal-description {
+    display: block;
     position: relative;
     z-index: 2;
     font-weight: 700;
@@ -189,6 +200,21 @@ button {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--text-main-color);
+}
+
+.product-card-modal-check:checked + .frame-crema {
+    background-color: #96AF8C;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+}
+
+.product-card-modal-check:checked + .frame-coffe {
+    background-color: var(--background-card-color-coffee);
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+}
+
+.product-card-modal-check:checked + .frame-milkshake {
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+    background-color: var(--background-card-color-milkshakes);
 }
 
 .product-card-modal-form {
@@ -218,6 +244,10 @@ button {
     font-weight: 400;
     font-size: 12px;
     line-height: 140%;
+}
+
+.product-card-modal-form input:not(:placeholder-shown):required:invalid {
+    border-color: red;
 }
 
 @media screen and (min-width: 320px) {
@@ -337,6 +367,10 @@ button {
     font-weight: 400;
     font-size: 12px;
     line-height: 140%;
+}
+
+.franchise-modal-form input:not(:placeholder-shown):required:invalid {
+    border-color: red;
 }
 
 @media screen and (min-width: 320px) {
