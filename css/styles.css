@@ -109,6 +109,20 @@ button {
     }
 }
 
+.product-card-modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    position: absolute; 
+    fill: var(--text-main-color);
+    width: 20px;
+    height: 20px;
+    border: none;
+    top: 12px; 
+    right: 12px;
+    background-color: transparent;
+}
+
 .product-card-modal-h2 {
     font-family: 'Seymour One', sans-serif;
     font-weight: 400;
@@ -336,6 +350,21 @@ button {
     border-radius: 10px;
     margin: 0 auto;
 }
+
+
+.franchise-modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    position: absolute; 
+    width: 20px;
+    height: 20px;
+    border: none;
+    top: 12px; 
+    right: 12px;
+    background-color: transparent;
+}
+
 
 .franchise-modal-h2 {
     width: 100%;
